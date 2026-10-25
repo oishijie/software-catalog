@@ -1,0 +1,47 @@
+{
+  "profile": {
+    "identity": {
+      "name": "月离软件分发",
+      "tagline": "Github / 知名软件分发",
+      "description": "浏览软件与版本，购买后即可下载。"
+    },
+    "branding": {
+      "logo": {
+        "kind": "icon",
+        "ref": "i-tabler-package",
+        "alt": "月离软件分发"
+      }
+    },
+    "announcement": {
+      "enabled": true,
+      "text": "本站用于解决盗版网站 以及部分软件不好下载的问题, 还有UP主自己开发的软件",
+      "tone": "info",
+      "dismissible": true
+    },
+    "support": {
+      "contacts": [
+        {
+          "id": "01a0e9e0-f531-73c3-b819-31dc88fa67cf",
+          "kind": "email",
+          "label": "支持邮箱",
+          "value": "435826135@qq.com"
+        }
+      ]
+    },
+    "footer": {
+      "tagline": "软件开源社区",
+      "copyright": "© 2026 月离万事屋",
+      "linkGroups": [],
+      "social": [],
+      "legal": [],
+      "compliance": {
+        "records": []
+      }
+    }
+  },
+  "revision": 8,
+  "etag": "\"site-profile-v1-r8-0189956160d81f69\"",
+  "documentDigest": "0189956160d81f69784178f65955353eef4eab6352a15bb729a451a31744d4ba",
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-10T05:35:44.266246Z"
+}

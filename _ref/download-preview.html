@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>下载区预览 · AB Download Manager</title>
+<style>
+  :root{
+    --distribution-canvas:#101722; --distribution-surface:#182131; --distribution-ink:#edf2fc;
+    --distribution-muted:#a9b5ca; --distribution-line:#2c394d; --distribution-soft:#22314b;
+    --distribution-accent:#8bd2b5; --ui-border-accented:#516383;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:24px;background:var(--distribution-canvas);color:var(--distribution-ink);
+       font:14px/1.5 "DM Sans","PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+  .wrap{max-width:900px;margin:0 auto}
+  .note{color:var(--distribution-muted);font-size:12px;margin:0 0 16px}
+  .distribution-panel{background:var(--distribution-surface);border:1px solid var(--distribution-line);border-radius:10px}
+  .distribution-download-section{padding:20px}
+  h2.title{display:flex;align-items:center;gap:8px;margin:0;font-size:20px;font-weight:600;letter-spacing:-.01em}
+  .title svg{color:var(--distribution-accent)}
+  .sub{margin:4px 0 0;font-size:13px;color:var(--distribution-muted)}
+  .distribution-platform-tabs{margin:16px 0 20px}
+  .tablist{display:flex;gap:0;padding:4px;border-radius:8px;background:var(--distribution-soft);overflow-x:auto}
+  .tab{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border:0;border-radius:6px;
+       background:transparent;color:var(--distribution-muted);font-size:13px;font-weight:500;white-space:nowrap;cursor:pointer}
+  .tab[data-state=active]{background:var(--distribution-surface);color:var(--distribution-accent)}
+  .group-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 12px}
+  .group-head h3{display:flex;align-items:center;gap:6px;margin:0;font-size:14px;font-weight:600}
+  .group-head h3 svg{color:var(--distribution-accent)}
+  .group-head span{font-size:12px;color:var(--distribution-muted)}
+  .group-sub{margin:4px 0 12px;font-size:12px;color:var(--distribution-muted)}
+  .source-list{display:grid;gap:12px}
+  .source-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:14px;padding:12px;
+              border:1px solid var(--distribution-line);border-radius:10px}
+  .source-name{display:flex;align-items:center;gap:10px;min-width:0}
+  .source-icon{display:grid;place-items:center;flex-shrink:0;width:36px;height:36px;border-radius:9px;
+               color:var(--distribution-accent);background:color-mix(in srgb,var(--distribution-accent) 8%,transparent)}
+  .source-title{font-size:14px;font-weight:500;color:var(--distribution-ink)}
+  .source-desc{margin-top:2px;font-size:12px;color:var(--distribution-muted)}
+  .source-file{grid-column:1;min-width:0}
+  .source-file-name{font-size:14px;font-weight:500;color:var(--distribution-ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .source-meta{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-top:6px;font-size:12px;color:var(--distribution-muted)}
+  .chip{padding:2px 6px;border-radius:4px;background:var(--distribution-soft);font-size:11px}
+  .meta-icon{display:inline-flex;align-items:center;gap:4px}
+  .source-action{grid-area:1/2/span 2;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;gap:12px}
+  .badge{padding:2px 8px;border-radius:4px;background:var(--distribution-soft);color:var(--distribution-muted);font-size:11px}
+  .btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:6px 12px;
+               border:1px solid var(--ui-border-accented);border-radius:6px;background:transparent;
+               color:var(--distribution-ink);font-size:13px;font-weight:500;text-decoration:none;cursor:pointer;white-space:nowrap}
+  .btn-outline:hover{background:var(--distribution-soft)}
+  .help{display:flex;align-items:flex-start;gap:10px;margin-top:20px;padding:14px;border-radius:10px;
+        background:color-mix(in srgb,var(--distribution-accent) 6%,var(--distribution-surface))}
+  .help svg{flex-shrink:0;color:var(--distribution-accent)}
+  .help p{margin:0;font-size:12px;line-height:1.7;color:var(--distribution-muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="note">静态预览（真实数据：AB Download Manager · ABDownloadManager_1.10.4_android_universal.apk）——仅用于核对下载区排版，非运行中的页面。</p>
+  <div class="distribution-panel">
+    <div class="distribution-download-section">
+      <header>
+        <h2 class="title"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l5 5l5-5m-5-7v12"/></svg> 下载安装</h2>
+        <p class="sub">选择系统和处理器，再选择下载来源。</p>
+      </header>
+
+      <div class="distribution-platform-tabs">
+        <div class="tablist" role="tablist">
+          <button class="tab" role="tab" data-state="active"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10v6m16-6v6M7 9h10v8a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1za5 5 0 0 1 10 0M8 3l1 2m7-2l-1 2M9 18v3m6-3v3"/></svg> Android</button>
+        </div>
+      </div>
+
+      <section>
+        <div class="group-head">
+          <h3><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10v6m16-6v6M7 9h10v8a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1za5 5 0 0 1 10 0M8 3l1 2m7-2l-1 2M9 18v3m6-3v3"/></svg> Android 版本下载</h3>
+          <span>通用版 · 正式版</span>
+        </div>
+        <p class="group-sub">适用于 Android · 通用版 · v1.10.4</p>
+        <div class="source-list">
+        <div class="source-row">
+          <div class="source-name">
+            <span class="source-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2c2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2a4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6c-.6.6-.6 1.2-.5 2V21"/></svg></span>
+            <div style="min-width:0">
+              <div class="source-title">GitHub</div>
+              <div class="source-desc">GitHub Release 发布的原始文件。</div>
+            </div>
+          </div>
+          <div class="source-file">
+            <div class="source-file-name">ABDownloadManager_1.10.4_android_universal.apk</div>
+            <div class="source-meta">
+              <span class="chip">Android 通用版</span>
+              <span class="chip">APK</span>
+              <span>10.8 MB</span>
+              <span class="meta-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M18.9 7a8 8 0 0 1 1.1 5v1a6 6 0 0 0 .8 3M8 11a4 4 0 0 1 8 0v1a10 10 0 0 0 2 6"/><path d="M12 11v2a14 14 0 0 0 2.5 8M8 15a18 18 0 0 0 1.8 6m-4.9-2a22 22 0 0 1-.9-7v-1a8 8 0 0 1 12-6.95"/></g></svg> SHA256</span>
+            </div>
+          </div>
+          <div class="source-action">
+            <span class="badge">外部源</span>
+            <a class="btn-outline" href="https://github.com/amir1376/ab-download-manager/releases/download/v1.10.4/ABDownloadManager_1.10.4_android_universal.apk" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></svg> 前往下载</a>
+          </div>
+        </div>
+        <div class="source-row">
+          <div class="source-name">
+            <span class="source-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 15l6-6m-4-3l.463-.536a5 5 0 0 1 7.071 7.072L18 13m-5 5l-.397.534a5.07 5.07 0 0 1-7.127 0a4.97 4.97 0 0 1 0-7.071L6 11"/></svg></span>
+            <div style="min-width:0">
+              <div class="source-title">GitHub 加速 · GH-Proxy</div>
+              <div class="source-desc">通过开发者提供的链接下载。</div>
+            </div>
+          </div>
+          <div class="source-file">
+            <div class="source-file-name">ABDownloadManager_1.10.4_android_universal.apk</div>
+            <div class="source-meta">
+              <span class="chip">Android 通用版</span>
+              <span class="chip">APK</span>
+              <span>10.8 MB</span>
+              <span class="meta-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M18.9 7a8 8 0 0 1 1.1 5v1a6 6 0 0 0 .8 3M8 11a4 4 0 0 1 8 0v1a10 10 0 0 0 2 6"/><path d="M12 11v2a14 14 0 0 0 2.5 8M8 15a18 18 0 0 0 1.8 6m-4.9-2a22 22 0 0 1-.9-7v-1a8 8 0 0 1 12-6.95"/></g></svg> SHA256</span>
+            </div>
+          </div>
+          <div class="source-action">
+            <span class="badge">外部源</span>
+            <a class="btn-outline" href="https://gh-proxy.com/https://github.com/amir1376/ab-download-manager/releases/download/v1.10.4/ABDownloadManager_1.10.4_android_universal.apk" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></svg> 前往下载</a>
+          </div>
+        </div>
+        <div class="source-row">
+          <div class="source-name">
+            <span class="source-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 15l6-6m-4-3l.463-.536a5 5 0 0 1 7.071 7.072L18 13m-5 5l-.397.534a5.07 5.07 0 0 1-7.127 0a4.97 4.97 0 0 1 0-7.071L6 11"/></svg></span>
+            <div style="min-width:0">
+              <div class="source-title">GitHub 加速 · GHFast</div>
+              <div class="source-desc">通过开发者提供的链接下载。</div>
+            </div>
+          </div>
+          <div class="source-file">
+            <div class="source-file-name">ABDownloadManager_1.10.4_android_universal.apk</div>
+            <div class="source-meta">
+              <span class="chip">Android 通用版</span>
+              <span class="chip">APK</span>
+              <span>10.8 MB</span>
+              <span class="meta-icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M18.9 7a8 8 0 0 1 1.1 5v1a6 6 0 0 0 .8 3M8 11a4 4 0 0 1 8 0v1a10 10 0 0 0 2 6"/><path d="M12 11v2a14 14 0 0 0 2.5 8M8 15a18 18 0 0 0 1.8 6m-4.9-2a22 22 0 0 1-.9-7v-1a8 8 0 0 1 12-6.95"/></g></svg> SHA256</span>
+            </div>
+          </div>
+          <div class="source-action">
+            <span class="badge">外部源</span>
+            <a class="btn-outline" href="https://ghfast.top/github.com/amir1376/ab-download-manager/releases/download/v1.10.4/ABDownloadManager_1.10.4_android_universal.apk" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6m-7 1l9-9m-5 0h5v5"/></svg> 前往下载</a>
+          </div>
+        </div>
+        </div>
+      </section>
+
+      <div class="help">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0m9-3h.01"/><path d="M11 12h1v4h1"/></g></svg>
+        <p>开源项目的文件取自 GitHub Release，并额外提供 GH-Proxy / GHFast 镜像加速。若某个来源不可用，换用其它来源即可。</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

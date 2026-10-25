@@ -1,0 +1,16 @@
+{
+  "total": 519,
+  "size": 24,
+  "pages": 22,
+  "crawledAt": "2026-10-11T07:02:44.727Z",
+  "origin": "https://apps.yuelili.com",
+  "counts": {
+    "total": 519,
+    "platforms": {
+      "android": 73,
+      "linux": 242,
+      "macos": 265,
+      "windows": 374
+    }
+  }
+}

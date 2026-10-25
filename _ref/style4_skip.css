@@ -1,0 +1,1 @@
+.distribution-skip{z-index:60;background:var(--distribution-ink);color:var(--distribution-surface);border-radius:8px;padding:10px 16px;position:fixed;top:12px;left:12px;transform:translateY(-180%)}.distribution-skip:focus{transform:none}

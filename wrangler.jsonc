@@ -1,0 +1,20 @@
+{
+  // Cloudflare Pages 项目配置（Direct Upload 时以此文件为准）
+  // 参考：https://developers.cloudflare.com/pages/functions/wrangler-configuration
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "software-catalog",
+  "compatibility_date": "2026-10-11",
+  "compatibility_flags": ["nodejs_compat"],
+  // cloudflare-pages 预设的产物目录就是 ./dist（内含 _worker.js/ 与静态资源），
+  // 不是默认的 .output/public —— 后者只在 Node 预设下才产生。
+  "pages_build_output_dir": "./dist",
+
+  // D1 数据库绑定：binding 必须是 DB（server/utils/db.ts 按此名取绑定）
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "software-catalog-db",
+      "database_id": "371187a2-8b55-4eda-83be-2a6e1a353f15"
+    }
+  ]
+}

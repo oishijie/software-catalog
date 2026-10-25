@@ -1,0 +1,121 @@
+[
+  {
+    "id": "81b6b695-07c9-4791-a202-743772325091",
+    "slug": "ai",
+    "name": "AI 工具",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "01a0f868-6f08-77aa-8ebb-5e9ee2bcc958",
+    "slug": "yueli",
+    "name": "Up自研",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "b3ebda79-0f5d-4de1-8979-eefbbfb49acd",
+    "slug": "office",
+    "name": "办公与文档",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "c4ffc4b4-68a8-4a85-bc04-f218d9f8a2c5",
+    "slug": "graphics",
+    "name": "图像与设计",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "4764f622-350d-435b-8783-c829e1c767ab",
+    "slug": "utilities",
+    "name": "实用工具",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "29e9ce1a-fe65-42ae-b617-84c86ced7363",
+    "slug": "developer",
+    "name": "开发工具",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "22ea5e0c-d25c-44cc-a296-58be9af23621",
+    "slug": "capture",
+    "name": "截图与录屏",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "3cb75f2e-ca9f-42b2-9776-7a87f637febd",
+    "slug": "mobile",
+    "name": "手机工具",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "d886d742-5681-4dd0-9ae0-c8a72125ec36",
+    "slug": "productivity",
+    "name": "效率与自动化",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "4f2af803-917b-4372-8dbb-0dc0b9729cec",
+    "slug": "files",
+    "name": "文件传输与同步",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "e7c17fcf-4563-4820-973c-0a63a3602c6f",
+    "slug": "browser",
+    "name": "浏览器扩展",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "654f758a-f4f7-4ba0-b27b-7464fb379f4d",
+    "slug": "games",
+    "name": "游戏工具",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "a3af4b6d-fa89-4ce5-aecd-b8ab3722e3d2",
+    "slug": "system",
+    "name": "系统与硬件",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "9ff8a7b9-7d1f-433c-80d5-671a237d6c9d",
+    "slug": "network",
+    "name": "网络与远程",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "c2d480c3-5a31-49b7-a298-c930047c5f85",
+    "slug": "reading",
+    "name": "阅读与笔记",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "015286bb-9c4c-4aaa-afc1-4b98a2dd4ee0",
+    "slug": "security",
+    "name": "隐私与安全",
+    "status": "active",
+    "revision": 1
+  },
+  {
+    "id": "161d43a8-d04c-4f54-a0d3-47afdbfc0822",
+    "slug": "media",
+    "name": "音视频工具",
+    "status": "active",
+    "revision": 1
+  }
+]
